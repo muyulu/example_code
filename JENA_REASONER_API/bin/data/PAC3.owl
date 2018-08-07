@@ -1,0 +1,747 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2018/1/habits#"
+     xml:base="http://www.semanticweb.org/ontologies/2018/1/habits"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:habits="http://www.semanticweb.org/ontologies/2018/1/habits#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits">
+        <terms:license>http://purl.org/NET/rdflicense/cc-by4.0</terms:license>
+        <rdfs:comment>Questionnaire of Health
+authors: Laia Subirats, Felipe Geva and Jordi Conesa</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#alcoholDrinksPerDay -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#alcoholDrinksPerDay">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Alcohol"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#cigarretesSmokedPerDay -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#cigarretesSmokedPerDay">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Tobacco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#hasCOPD -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#hasCOPD">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#QualitativeGrade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#hasDiabetes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#hasDiabetes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#QualitativeGrade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#hasWeight -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#hasWeight">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Weight"/>
+        <rdfs:sameAs>http://dbpedia.org/property/weight</rdfs:sameAs>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#hasAge">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#hasGender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#hasGender">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#hasValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Alcohol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Alcohol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Alcoholic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Alcoholic">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#alcoholDrinksPerDay"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#HighAlcoholicConsumption"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Unhealthy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#COPD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#COPD">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Diabetes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Diabetes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Disease"/>
+        <rdfs:sameAs>http://dbpedia.org/page/Category:Diabetes</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Diet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Diet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Observation"/>
+        <rdfs:sameAs>http://dbpedia.org/ontology/Disease</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Exercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Exercise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Healthy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Healthy">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Person"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Unhealthy"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Unhealthy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#HighAlcoholicConsumption -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#HighAlcoholicConsumption">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Alcohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#HighTobaccoConsumption -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#HighTobaccoConsumption">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Tobacco"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#HighWeight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#HighWeight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Weight"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Hypertension -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Hypertension">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#LowWeight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#LowWeight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Weight"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Observation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Observation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Overweight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Overweight">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#hasWeight"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#HighWeight"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Unhealthy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#hasDiabetes"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#QualitativeGrade"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Healthy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Unhealthy"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#QualitativeGrade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#QualitativeGrade"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Smoker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Smoker">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#cigarretesSmokedPerDay"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#HighTobaccoConsumption"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Unhealthy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Tobacco -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Tobacco">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Unhealthy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Unhealthy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Weight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Weight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Alice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Alice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Person"/>
+        <alcoholDrinksPerDay rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#drinks_10"/>
+        <cigarretesSmokedPerDay rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#cigarretes_110"/>
+        <hasCOPD rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Moderate"/>
+        <hasDiabetes rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#No"/>
+        <hasWeight rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#weigh_300"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Bob -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Bob">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Person"/>
+        <alcoholDrinksPerDay rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#drinks_2"/>
+        <cigarretesSmokedPerDay rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#cigarretes_0"/>
+        <hasDiabetes rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Mild"/>
+        <hasWeight rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#weigh_300"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Complete -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Complete">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#QualitativeGrade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Mild -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Mild">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#QualitativeGrade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Moderate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Moderate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#QualitativeGrade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#No -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#No">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#QualitativeGrade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Peter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Peter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Person"/>
+        <hasDiabetes rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Mild"/>
+        <hasWeight rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#weight_120"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#Severe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#Severe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#QualitativeGrade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#cigarretes_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#cigarretes_0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Tobacco"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#cigarretes_110 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#cigarretes_110">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Tobacco"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#drinks_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#drinks_10">
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#drinks_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#drinks_2">
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#weigh_300 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#weigh_300">
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#weight_100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#weight_100">
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2018/1/habits#weight_120 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#weight_120">
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#o">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2018/1/habits#w">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HighAlcoholicConsumptions</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Alcohol"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#o"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#t"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#HighAlcoholicConsumption"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HighTobaccoConsumptions</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Tobacco"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#o"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#t"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#HighTobaccoConsumption"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HighWeight</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#Weight"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#hasValue"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#o"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#w"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#w"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#HighWeight"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/ontologies/2018/1/habits#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

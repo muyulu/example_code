@@ -1,0 +1,188 @@
+<project name="Test Alumnes PRAC1" basedir=".">
+	
+	<!--Directorio donde estan todas las carpetas de las practicas -->
+		<property name="directorioEntregas" value="alumnosprac3"/>
+		<!--Directorio de la practica a analizar -->
+		<property name="alumno" value="solucio"/>
+		<!--05053_SOLPRA1_20111 -->
+
+	<!--Donde esta junit.jar -->
+	<property name="junit-lib" location="/usr/lib/eclipse/dropins/sdk/plugins"/>
+	<!--Donde estan librerias -->
+	<property name="library.dir" value="lib"/>
+	<property name="projName" value="PAC3_20162"/>
+	<property name="projDir" location=""/>
+	<property name="src-dir" location="src"/>
+	<property name="bin-dir" location="bin"/>
+	
+	
+	<property name="directorioAlumno" value="${directorioEntregas}/${alumno}"/>
+	
+	<property name="directorioPRAC" value="${src-dir}/uoc"/>
+	<property name="directorioExercici1" value="exercise2"/>
+	<property name="directorioExercici2" value="exercise3"/>
+	<property name="directorioUtils" value="utils"/>
+	
+	<property name="exercici1Java" value="Exercise2.java"/>
+	<property name="exercici2Java" value="Exercise3.java"/>
+	
+	<path id="libraries">
+		<fileset dir="${projDir}/${library.dir}">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+	<!-- libreria ant-contrib task, para hacer el foreach si no está
+	localizada en el mismo directorio de ant bajarla y guardarla ahi-->
+	<!-- taskdef resource="net/sf/antcontrib/antcontrib.properties">
+		<classpath>
+			<pathelement location="/usr/share/java/ant-contrib.jar"/>
+		</classpath>
+	</taskdef -->
+
+
+
+
+
+	<!-- Copiar ficheros -->
+	
+	<target name="borrarFicherosActuales">
+		<delete verbose="yes">
+			<fileset dir="${directorioPRAC}/${directorioExercici1}" casesensitive="false">
+				<filename name="${exercici1Java}"/>				
+			</fileset>
+			<fileset dir="${directorioPRAC}/${directorioExercici2}" casesensitive="false">
+				<filename name="${exercici2Java}"/>							
+			</fileset>			
+		</delete>
+	</target>
+
+	<target name="copiarFicherosJava">
+		<copy tofile="${directorioPRAC}/${directorioExercici1}/${exercici1Java}" overwrite="yes">
+			<fileset dir="${directorioAlumno}" casesensitive="false">
+				<include name="**/${exercici1Java}"/>
+			</fileset>
+		</copy>
+		<copy tofile="${directorioPRAC}/${directorioExercici2}/${exercici2Java}" overwrite="yes">
+			<fileset dir="${directorioAlumno}" casesensitive="false">
+				<include name="**/${exercici2Java}"/>
+			</fileset>
+		</copy>		
+	</target>
+	<!-- Refresca el eclipse y recompila-->
+	<target name="refreshProject">
+		<eclipse.refreshLocal resource="${directorioPRAC}/${directorioExercici1}/${exercici1Java}" depth="infinite" />
+		<eclipse.incrementalBuild project="${projName}" kind="full"/>
+	</target>
+	<!-- Inicializar -->	
+	<target name="Inicializar PR3" depends="copiarFicherosJava,refreshProject">
+		<echo message="Inicializada practica"/>
+	</target>
+			
+	<target name="Run Exercici2">
+		<java classname="uoc.exercise2.Exercise2">
+			<classpath>
+				<path path="${bin-dir}"/>
+				<path refid="libraries"/>
+			</classpath>
+		</java>
+	</target>
+	
+	<!-- TEST JAVA-->
+	
+	<!-- property name="tst-bin" location="bin/test" />
+	<property name="bin-dir" location="bin"/>
+	
+	<property name="TALK" value="true" />
+	
+	<property name="build-dir" location="build/classes"/>
+	<property name="build-jar" location="build/jar"/>
+	
+	<path id="classpath.base">
+			<fileset dir="${junit-lib}">
+				<include name="*.jar"/>
+			</fileset>	
+			<path refid="libraries"/>
+		</path>
+	
+
+<path id="application" location="${bin-dir}"/>
+	
+	<patternset id="meta.files" description="metaficheros a copiar al jar">
+		<include name="*.properties" />
+		<include name="*.txt" />
+	</patternset>
+	
+	<target name="clean-src">
+		<delete verbose="${TALK}">
+			<fileset dir="${bin-dir}" includes="**/*.class" />			
+		</delete>
+	</target>
+				
+	
+	<target name="CompilaProjecto" depends="clean-src">
+		<mkdir dir="${bin-dir}"/>
+		<javac
+		    srcdir="${src-dir}"			
+		    destdir="${bin-dir}" classpathref="classpath.base"
+			debug="true"/>
+		<copy todir="${bin-dir}" verbose="true">
+			<fileset dir="${projDir}">
+				<patternset refid="meta.files" />
+			</fileset>
+		</copy>		
+	</target>	
+
+	<target name="testtriggers" depends="CompilaProjecto">
+		<mkdir dir="resultados_${directorioAlumno}_triggers"/>
+			<junit fork="no" printsummary="true" showoutput="true">
+				<classpath>
+					<path refid="classpath.base"/>
+					<path refid="application"/>
+				</classpath>
+				<formatter type="plain" usefile="true" />
+				<batchtest  fork="yes" todir="resultados_${directorioAlumno}_triggers" >
+					 <fileset dir="${bin-dir}">                  
+					    <include name="**/DBTest1.class"/>					 	
+					  </fileset>
+				 </batchtest>			
+			</junit>		
+	</target>
+	
+	<target name="testjava" depends="CompilaProjecto">
+			<mkdir dir="resultados_${directorioAlumno}_java"/>
+				<junit fork="no" printsummary="true" showoutput="true">
+					<classpath>
+						<path refid="classpath.base"/>
+						<path refid="application"/>
+					</classpath>
+					<formatter type="plain" usefile="true" />
+					<batchtest  fork="yes" todir="resultados_${directorioAlumno}_java" >
+						 <fileset dir="${bin-dir}">                  
+						    <include name="**/ScheduleInsertTest.class"/>					 	
+						  </fileset>
+					 </batchtest>			
+				</junit>		
+		</target>
+
+	<target name="all" depends="testtriggers" />
+				      	
+  	<target name="Mensaje inicio Prueba">
+		<echo message="Pruebas de ${directorioAlumno}"/>
+	</target>
+	
+	<target name="Juego De pruebas un alumno" depends="Mensaje inicio Prueba,Inicializar practicas, testtriggers, Inicializar practicas Java,testjava">
+		
+	</target>
+	
+	
+	<target name="Juegos De pruebas todos" description="Para el directorio Alumno recoge todos los directorios y los pasa por parametro a la siguente tarea" >
+			<foreach target="Juego De pruebas un alumno" param="directorioAlumno">
+				<path>
+					<dirset dir="${directorioEntregas}">
+						<include name="*"/>
+					</dirset>					
+				</path>
+			</foreach>
+	</target-->
+</project>
+
